@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Products]</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+    <main class="container flex gap-5 py-6 flex-wrap">
+        <div class="flex justify-between w-full mb-6 items-end min-h-[50px] ">
+            <div class="flex flex-col gap-1">
+                <a href="" class="flex items-center text-primary gap-2 text-sm py-[10px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd"
+                            d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Back
+                </a>
+                <h1 class="text-2xl leading-9 text-black">
+                    Browse All MSI Graphic Cards
+                </h1>
+            </div>
+            <div class="relative flex items-center border-[#ABABAB] border-[1px]">
+                <input type="search" name="product-search" id="product-search" placeholder="Search products"
+                    class="pr-4 pl-8 py-2  text-primary text-sm focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-4 h-4 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                    <path fill-rule="evenodd"
+                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </div>
+
+        </div>
+        <div class="w-[275px] shrink-0">
+            <h2 class="text-[#272727] text-xl leading-8 font-medium mb-2">Filter</h2>
+            <form action="filterProduct" id="product-filters" class="flex flex-col gap-6">
+                <fieldset class="filtergroup py-2">
+                    <h3 class="filtergroup__name font-medium leading-6 mb-2">Series</h3>
+                    <h5 class="filtergroup__desc text-secondary text-xs leading-[18px] px-2 py-1">Select one or more tag below to see specific products.</h5>
+                </fieldset>
+            </form>
+        </div>
+        <div class="products">
+
+            <div class="product-box">
+                <label class="product-box__label">NEW</label>
+                <img src="/assets/img/Media.png" alt="" class="product-box__image">
+                <div class="product-box__info py-4 px-2 flex flex-col gap-4 ">
+                    <h3 class="product-box__title">GeForce RTX™ 4090 GAMING XIV TRIO XI 24G GDDR5</h3>
+                    <div class="product-box__tags scroll-container">
+                        <div class="product-box__tag ">
+                            NVIDIA
+                        </div>
+                        <div class="product-box__tag ">
+                            RTX 40
+                        </div>
+                        <div class="product-box__tag ">
+                            GDDR5X
+                        </div>
+                        <div class="product-box__tag ">
+                            16GB
+                        </div>
+                        <div class="product-box__tag ">
+                            NVIDIA
+                        </div>
+                        <div class="product-box__tag ">
+                            RTX 40
+                        </div>
+                        <div class="product-box__tag ">
+                            GDDR5X
+                        </div>
+                        <div class="product-box__tag ">
+                            16GB
+                        </div>
+
+                    </div>
+                    <p class="product-box__description">GeForce RTX™ 4090 GAMING X TRIO 24G is a cooling and
+                        power-performance juggernaut and chart-topping thermal performance.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/products.js"></script>
+
+</body>
+
+</html>
