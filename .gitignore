@@ -1,13 +1,8 @@
 # Ignore package.json and package-lock.json
-package.json
-package-lock.json
 
 # Ignore the node_modules directory
 /node_modules
 
 # Ignore the input.css file inside the /assets/css/ directory
-/assets/css/input.css
 
 # Ignore tailwind.config.js and postcss.config.js
-tailwind.config.js
-postcss.config.js

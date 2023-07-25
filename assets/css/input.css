@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+    @apply text-sm px-4 py-[10px] font-semibold;
+}
+
+.button.solid {
+    @apply border-[2px] border-primary bg-primary text-white;
+}
+
+.button.line {
+    @apply border-[2px] border-primary bg-transparent text-primary;
+}
+
+.container {
+    @apply w-[1160px] mx-auto;
+}
+
+nav>.menu-item {
+    @apply py-2 text-primary text-sm font-semibold border-primary;
+}
+
+.hovered {
+    position: relative;
+    padding-bottom: 5px;
+    /* Set the initial padding for the bottom line */
+}
+
+/* Define the pseudo-element that creates the bottom line */
+.hovered::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Start with a line of width 0 */
+    height: 2px;
+    /* Set the desired height for the bottom line */
+    @apply bg-primary;
+    /* Set the color of the bottom line */
+    transition: width 0.3s ease;
+    /* Define the animation transition */
+}
+
+/* Add animation on hover */
+.hovered.active::after {
+    width: 100%;
+    /* When .menu-item is hovered, animate the width to 100% (from left to right) */
+}
+
+select[data-icon] {
+    padding-left: 2rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.5rem;
+}
+
+select[data-icon] option {
+    padding-left: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.5rem;
+}
+
+.dropdown {
+    @apply absolute overflow-hidden bg-white px-12 shadow-2xl top-full left-0 opacity-0 font-normal;
+    max-height: 0px;
+    transition: all .3s ease-in-out;
+}
+
+.dropdown .level-2 {
+    width: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.dropdown .level-2 * {
+    white-space: nowrap !important;
+}
+
+.dropdown .level-2.active {
+    width: 200px;
+    padding-left: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.dropdown.active {
+    @apply py-4 mt-2 opacity-100;
+    max-height: 1000px;
+}
+
+#products-carousel {
+    @apply pt-12 pb-6 overflow-x-scroll;
+    padding-left: calc((100vw - 1160px)/2);
+    /* white-space: nowrap; */
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 5px;
+    /* Adjust the width to 5px */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 1000px;
+    width: 5px;
+    /* Adjust the width to 5px */
+}
+
+/* Custom scrollbar styles - optional */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-container::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Enable drag scroll */
+.scroll-container.draggable {
+    cursor: grab;
+    cursor: -webkit-grab;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.scroll-container.dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.category-box {
+    @apply block w-[370px] h-[600px] relative bg-[#D1DBE1] overflow-hidden shrink-0;
+}
+
+#breadcrumbs {
+    color: #ababab;
+    @apply flex gap-2 mt-6 mb-[2px];
+}
+
+
+#breadcrumbs li:not(:last-child)::after {
+    content: " >";
+    padding: 0 5px;
+}
+
+.tabs {
+    @apply flex gap-4 text-sm;
+}
+
+.tabs .tab {
+    @apply py-2 px-0 opacity-40 text-primary cursor-pointer;
+}
+
+.tabs .tab.active {
+    @apply opacity-100 border-b-[2px] border-primary border-spacing-2;
+}
+
+.tab-content {
+    display: none;
+    animation-duration: 0.1s !important;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+#product-content {
+    @apply text-sm text-[#454545] leading-5;
+}
+
+#product-content p,
+#product-content ul,
+#product-content ol {
+    @apply mb-5;
+}
+
+#product-content ul {
+    @apply list-disc list-outside pl-5;
+}
+
+#product-content ol {
+    @apply list-decimal list-outside pl-5;
+}
+
+#product-content li {
+    @apply mb-2;
+}
+
+.lg-components{
+    background: white !important;
+}
+
+.lg-thumb-outer{
+    padding-bottom: 40px;
+}
+
+.lg-backdrop,.lg-outer .lg-thumb-outer{
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.main-slider img {
+    @apply w-full h-full object-contain bg-white;
+}
+
+.thumbnail-slider {
+    @apply py-3 px-[50px];
+}
+
+.thumbnail-slider .slick-track {
+    padding-bottom: 30px;
+}
+
+.thumbnail-slider .slick-slide {
+    @apply px-2 cursor-pointer;
+}
+
+.thumbnail-slider .slick-current img {
+    @apply shadow-xl;
+}
+
+.thumbnail-slider img {
+    @apply w-full h-full object-contain border border-[#D1DBE1];
+}
+
+.table-list {
+    @apply w-full text-sm leading-6 text-[#4D4D4D];
+}
+
+.table-list>li {
+    @apply flex items-center px-2 py-[10px];
+}
+
+/* alternate the bg color of .table-list>li */
+.table-list>li:nth-child(odd) {
+    background-color: #E0E7EB;
+}
+
+.table-list>li:nth-child(even) {
+    background-color: #fff;
+}
+
+.table-list>li>div:first-child {
+    @apply w-[400px] font-semibold text-[#252525];
+}
+
+
+.products {
+    @apply grow;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.products .product-box {
+    @apply bg-[#F2F2F2] min-h-[480px];
+    flex-basis: calc(33.33% - 16px);
+    /* (100% / 3) - 2 * gap = 33.33% - 24px */
+    box-sizing: border-box;
+    /* Ensures padding and borders don't increase the width */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+.product-box__image{
+    @apply w-full h-[275px] object-contain bg-white p-2;
+}
+
+.product-box__label{
+    @apply bg-primary text-white text-sm px-4 py-1 absolute top-2 left-2;
+}
+
+.product-box__title{
+    @apply text-[#272727] font-medium leading-6;
+}
+
+.product-box__tags{
+    @apply flex gap-4 max-w-[256px] overflow-x-scroll flex-nowrap -mb-4;
+}
+
+.product-box__tag{
+    flex-shrink: 0 !important;
+    width: fit-content !important;
+    @apply px-1 py-[2px] text-xs text-primary hover:bg-primary/20 cursor-pointer;
+}
+
+.product-box__description{
+    @apply text-[#707070] text-xs leading-[18px];
+}
+
